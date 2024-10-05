@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+    --color-background: #f8f8f8;
+    --color-container-bg: #ffffff;
+    --color-text: #444444;
+    --color-border: #dddddd;
+    --color-button-bg: #d46666;
+    --color-button-hover: #bf5555;
+    --color-input-bg: #fafafa;
+    --color-placeholder: #b0b0b0;
+    --color-answer: #5c5c5c;
+
+    --font-size-base: 1rem;
+    --font-size-title: 1.5rem;
+    
+    --padding-container: 2rem;
+    --padding-input-button: 0.625rem;
+
+    --border-radius: 0.3125rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-background);
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    background-size: 300px 300px;
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.container {
+    background-color: var(--color-container-bg);
+    padding: var(--padding-container);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 25rem;
+    width: 100%;
+}
+
+h1 {
+    font-size: var(--font-size-title);
+    font-weight: 300;
+    color: var(--color-text);
+    margin-bottom: 1.25rem;
+}
+
+.input-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+input {
+    padding: var(--padding-input-button);
+    font-size: var(--font-size-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    width: 70%;
+    margin-right: 0.625rem;
+    outline: none;
+    background-color: var(--color-input-bg);
+    color: var(--color-text);
+    transition: border-color 0.3s;
+}
+
+input::placeholder {
+    color: var(--color-placeholder);
+}
+
+input:focus {
+    border-color: var(--color-button-bg);
+}
+
+button {
+    padding: var(--padding-input-button) 1.25rem;
+    font-size: var(--font-size-base);
+    color: #ffffff;
+    background-color: var(--color-button-bg);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--color-button-hover);
+}
+
+#answer {
+    font-size: var(--font-size-base);
+    color: var(--color-answer);
+    margin-top: 1.25rem;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    input {
+        width: 65%;
+    }
+
+    button {
+        padding: var(--padding-input-button) 1rem;
+    }
+}
